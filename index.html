@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="jquery.cutree.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="dist/jquery.cutree.js"></script>
     <script type="text/javascript">
+        // Initializing the tree
         $(function(){
-            $('#spiskota').cutree();
+            $('.cutree').cutree();
         });
     </script>
-    <link rel="stylesheet" href="cutree.css"/>
+    <link rel="stylesheet" href="css/cutree.css"/>
 </head>
 <body>
 
-    <ul id="spiskota">
+    <ul class="cutree">
         <li>Item
         <b>test</b></li>
         <li>Item2</li>

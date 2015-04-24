@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="jquery.cutree.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#spiskota').cutree();
+        });
+    </script>
+    <link rel="stylesheet" href="cutree.css"/>
+</head>
+<body>
+
+    <ul id="spiskota">
+        <li>Item
+        <b>test</b></li>
+        <li>Item2</li>
+        <li>Item3
+            <ul>
+                <li>Item1
+                    <ul>
+                        <li>Item1</li>
+                        <li>Item2
+                            <ul>
+                                <li>Item1<b>test</b></li>
+                                <li>Item2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Item2</li>
+                <li>Item3
+                    <ul>
+                        <li>Item1</li>
+                        <li>Item2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Item4</li>
+    </ul>
+
+</body>
+
+
+
+</html>

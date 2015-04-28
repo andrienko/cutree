@@ -11,9 +11,44 @@
             $('.cutree').cutree();
         });
     </script>
+
     <link rel="stylesheet" href="example_css/simplest.css"/>
+    <link rel="stylesheet" href="example_css/treeview.css"/>
+
 </head>
 <body>
+<br/>
+    No styling at all:<br/>
+
+    <ul class="cutree">
+        <li>Item</li>
+        <li>Item2</li>
+        <li>Item3 with subitems
+            <ul>
+                <li>Subitem 1
+                    <ul>
+                        <li>Subitem 1</li>
+                        <li>Subitem 2 with subitems
+                            <ul>
+                                <li>Subitem 1</li>
+                                <li>Subitem 2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Subitem 2</li>
+                <li>Subitem 3 with subitems
+                    <ul>
+                        <li>Subitem 1</li>
+                        <li>Subitem 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Item4</li>
+    </ul>
+    <br/>
+    Basic styling: <br/><br/>
 
     <ul class="cutree base">
         <li>Item</li>
@@ -36,6 +71,36 @@
                     <ul>
                         <li>Item1</li>
                         <li>Item2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Item4</li>
+    </ul>
+    <br/>
+    Tree-view style:<br/><br/>
+
+    <ul class="cutree treeview">
+        <li>Item</li>
+        <li>Item2</li>
+        <li>Item3 with subitems
+            <ul>
+                <li>Subitem 1
+                    <ul>
+                        <li>Subitem 1</li>
+                        <li>Subitem 2 with subitems
+                            <ul>
+                                <li>Subitem 1</li>
+                                <li>Subitem 2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Subitem 2</li>
+                <li>Subitem 3 with subitems
+                    <ul>
+                        <li>Subitem 1</li>
+                        <li>Subitem 2</li>
                     </ul>
                 </li>
             </ul>

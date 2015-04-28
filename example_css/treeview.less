@@ -3,17 +3,78 @@
 You are not required to use it at all, it is here just for
 sake of example.*/
 
+
+// Plus-box style
+.cutree.treeview li:before{
+
+  display: inline-block;
+  visibility:hidden;
+  overflow: hidden;
+  font:normal 1em monospace;
+  content:'+';
+  width: 0.9em;
+  height: 0.9em;
+  line-height:0.8em;
+  text-align: center;
+  border-radius:0.2em;
+  margin-right: 0.3em;
+  background: #eee linear-gradient(135deg, #fff, #ddd);
+  box-sizing:border-box;
+  border:1px solid #aaa;
+}
+
 .cutree.treeview{
+  display: inline-block;
+  min-width: 500px;
+  &, *{margin: 0;padding: 0; }
   cursor: default;
-  &,*{
-    margin: 0;
-    padding: 0;
-  }
+  border:1px solid #888;
+  background: #fff;
+  margin:1em;
+  padding:1em 1em 1em 0.5em !important;
+  font:normal 12px sans-serif;
+
   li{
-    list-style-type: none;
+    list-style-type:none;
+    margin-bottom: 0.25em;
+    z-index: 2;
+    &.cutree_children {
+      cursor: pointer;
+    }
+
+    &.cutree_children:before{
+      visibility:visible;
+    }
+    &.cutree_opened:before{
+      content:'—';
+    }
   }
   ul{
-    padding-left: 0.5em;
+    padding:0.1em 0 0 1.25em;
   }
+}
 
+// Side lines
+.cutree.treeview {
+  li.cutree_children:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    content:'';
+    width: 0.5em;
+    border-top:1px dotted;
+  }
+  ul {
+    position: relative;
+  }
+  ul:before {
+    position: absolute;
+    left: 0.5em;
+    top: 0;
+    bottom: 0.5em;
+    content:'';
+    display: block;
+    border-left:1px dotted #ddd;
+    z-index: 0;
+  }
 }

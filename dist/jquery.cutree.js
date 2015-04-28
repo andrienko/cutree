@@ -6,6 +6,7 @@
         class_main:'cutree',
         class_wrap:'cutree_wrap',
 
+        event_init_cutree:'tree_init',
         event_change_state:'tree_change_state',
         event_open:'tree_open',
         event_close:'tree_close',
@@ -38,19 +39,20 @@
 
     var init = function(element){
 
+        $(window).trigger(strings.event_init_cutree,element);
+
         element
             .addClass(strings.class_main)
             .click(click)
             .find(strings.tag_parent).hide()                //hiding all ul elements inside ours
             .parent().addClass(strings.class_children);     //adding class that indicates that element has children
 
-        // Wrapping non-empty text nodes.
-        // TODO: Fix the mess
         element
-            .find('.'+strings.class_children).contents().filter(function(){
-                return this.nodeType === 3 && $.trim(this.textContent) != '';
-            })
-            .wrap('<'+strings.tag_wrap+' class="'+strings.class_wrap+'"/>');
+            .find('.'+strings.class_children).contents().filter(function(){     // Finding all nodes inside li elements
+                return this.nodeType === 3 && $.trim(this.textContent) != '';   // filtering out tag nodes and empty
+            })                                                                  // text nodes.
+            .wrap('<'+strings.tag_wrap+' class="'+strings.class_wrap+'"/>');    // Then wrapping remaining non-empty
+                                                                                // text nodes with span tag.
 
     };
 

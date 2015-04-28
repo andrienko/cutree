@@ -1,0 +1,25 @@
+/* This one is the simple list example
+
+You are not required to use it at all, it is here just for
+sake of example.*/
+.cutree.base {
+  font: normal 16px monospace;
+  cursor: default;
+}
+.cutree.base,
+.cutree.base * {
+  margin: 0;
+  padding: 0;
+}
+.cutree.base li {
+  list-style-type: none;
+}
+.cutree.base .cutree_wrap:after {
+  content: ' >';
+}
+.cutree.base .cutree_opened > .cutree_wrap:after {
+  content: ' v';
+}
+.cutree.base ul {
+  padding-left: 0.5em;
+}

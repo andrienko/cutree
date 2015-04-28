@@ -1,12 +1,15 @@
 (function($){
 
     var strings = {
-        class_opened:'opened',
-        class_children:'has_children',
+        class_opened:'cutree_opened',
+        class_children:'cutree_children',
         class_main:'cutree',
+        class_wrap:'cutree_wrap',
+
         event_change_state:'tree_change_state',
         event_open:'tree_open',
         event_close:'tree_close',
+
         tag_parent:'ul',
         tag_children:'li',
         tag_wrap:'span'
@@ -47,7 +50,7 @@
             .find('.'+strings.class_children).contents().filter(function(){
                 return this.nodeType === 3 && $.trim(this.textContent) != '';
             })
-            .wrap('<'+strings.tag_wrap+' class="wrap"/>');
+            .wrap('<'+strings.tag_wrap+' class="'+strings.class_wrap+'"/>');
 
     };
 

@@ -11,8 +11,8 @@ Basic use
 
 The only requirements are jQuery and the plugin itself:
 
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="bower_components/cutree/dist/jquery.cutree.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.cutree.js"></script>
     
 There are two ways of initializing cutree elements - manually, by calling the cutree() function on jquery object that
 contains the elements you want to be foldable, or automatically, by adding `cutree_init` class to elements you want to
@@ -56,4 +56,3 @@ its children are now visible, will get a `cutree_opened` class. The li that IS c
 
 There are several 'demo' css files in example_css folder, you can simply add them to your project and then add
 corresponding classes:
-

@@ -2,6 +2,13 @@
 
 You are not required to use it at all, it is here just for
 sake of example.*/
+.cutree {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 .cutree.treeview li:before {
   display: inline-block;
   visibility: hidden;
@@ -20,7 +27,6 @@ sake of example.*/
 }
 .cutree.treeview {
   display: inline-block;
-  min-width: 500px;
   cursor: default;
   border: 1px solid #888;
   background: #fff;

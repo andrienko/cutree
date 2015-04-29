@@ -3,6 +3,15 @@
 You are not required to use it at all, it is here just for
 sake of example.*/
 
+// Disabling selection
+.cutree {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 // Plus-box style
 .cutree.treeview li:before{
 
@@ -24,7 +33,6 @@ sake of example.*/
 
 .cutree.treeview{
   display: inline-block;
-  min-width: 500px;
   &, *{margin: 0;padding: 0; }
   cursor: default;
   border:1px solid #888;

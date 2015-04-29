@@ -3,7 +3,6 @@
 You are not required to use it at all, it is here just for
 sake of example.*/
 
-
 // Plus-box style
 .cutree.treeview li:before{
 
@@ -36,6 +35,7 @@ sake of example.*/
 
   li{
     list-style-type:none;
+    position: relative;
     margin-bottom: 0.25em;
     z-index: 2;
     &.cutree_children {
@@ -56,13 +56,14 @@ sake of example.*/
 
 // Side lines
 .cutree.treeview {
-  li.cutree_children:after {
+  li li.cutree_children:after {
     display: block;
     position: absolute;
-    left: 0;
+    left: -0.75em;
+    top: 0.5em;
     content:'';
     width: 0.5em;
-    border-top:1px dotted;
+    border-bottom:1px dotted #bbb;
   }
   ul {
     position: relative;
@@ -74,7 +75,7 @@ sake of example.*/
     bottom: 0.5em;
     content:'';
     display: block;
-    border-left:1px dotted #ddd;
+    border-left:1px dotted #bbb;
     z-index: 0;
   }
 }

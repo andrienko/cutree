@@ -34,7 +34,7 @@ basic usage would be:
       </li>
     <li>
     
-Which should work without a line of css code or any additional JS.
+Which should work **without a line of css code or any additional JS**.
 
 Of course, you can init cutree manually. Say, for a tree with `id="my_tree"`:
 

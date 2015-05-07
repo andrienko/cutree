@@ -33,7 +33,7 @@
 
     var click = function(e){
 
-        var targetElement = e.toElement;
+        var targetElement = e.target;
         var target = $(targetElement);
 
         // TODO: Check if not too twisted
@@ -90,6 +90,7 @@
     };
 
     $(function(){
+
         $('.'+strings.class_autoinit).cutree();
     });
 

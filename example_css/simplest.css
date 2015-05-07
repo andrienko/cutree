@@ -12,7 +12,8 @@ sake of example.*/
   padding: 0;
 }
 .cutree.base li {
-  list-style-type: none;
+  list-style: url(data:0) none;
+  /*Bleh, IE fix*/
 }
 .cutree.base .cutree_wrap:after {
   content: ' >';

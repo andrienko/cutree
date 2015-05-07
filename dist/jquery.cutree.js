@@ -19,6 +19,7 @@
 
     var default_options = {
         wrap:true,
+        lstn:false,
         shift:true
     };
 
@@ -69,6 +70,7 @@
 
         $(window).trigger(strings.event_init_cutree,element);
         element.toggleClass(strings.class_shiftkey,options.shift);
+        options.lstn && element.find('li').css('list-style','none');
         element
             .addClass(strings.class_main)
             .click(click)
